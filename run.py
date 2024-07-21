@@ -1,5 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
+import datetime
 
 prog_start = """
 
@@ -61,6 +62,9 @@ def consultant_choice():
             break
 
 def project_name():
+    """
+    User input to enter name of their project
+    """
     while True:
         project_name_input = input("Enter your project name (50 characters max):\n")
         if len(project_name_input) <= 50:
@@ -68,14 +72,29 @@ def project_name():
             break
         else:
             print("Project name must be 50 characters or less.")
-    
 
-project_name()
+
+def task_date():
+    """
+    User input for date
+    """
+    while True:
+        date_input = input("Enter a date (YYYY-MM-DD):\n")
+        try:
+            valid_date = datetime.datetime.strptime(date_input, "%Y-%m-%d")
+            print(f"Date {date_input} is valid.")
+            break
+        except ValueError:
+            print("Invalid date format. Please enter the date in YYYY-MM-DD format.")
+
+
 
 """
 start()
 consultant_list()
 consultant_choice()
+project_name()
+task_date()
 """
 
 
