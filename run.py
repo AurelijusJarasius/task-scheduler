@@ -24,7 +24,6 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('task_scheduler')
 
 
-
 def start():
     """
     Program start and welcome message
@@ -61,9 +60,22 @@ def consultant_choice():
             print(f"Invalid input. Please enter a name from the list.")
             break
 
+def project_name():
+    while True:
+        project_name_input = input("Enter your project name (50 characters max):\n")
+        if len(project_name_input) <= 50:
+            print(f"{project_name_input} accepted")
+            break
+        else:
+            print("Project name must be 50 characters or less.")
+    
 
+project_name()
+
+"""
 start()
 consultant_list()
 consultant_choice()
+"""
 
 
