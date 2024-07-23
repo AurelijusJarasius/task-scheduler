@@ -100,15 +100,26 @@ def task_input():
             print("Number of tasks should be a number between 1 and 10")
         else:
             print(f"You have entered {number_of_tasks} task(s)")
+            return number_of_tasks
     except ValueError:
         print("Please enter a valid number.")
 
+def get_task_description(number_of_tasks):
+    task_descriptions = []
+    for i in range(number_of_tasks):
+        description = input(f"Enter description for task {i + 1}:\n")
+        task_descriptions.append(description)
+    return task_descriptions
+
+number_of_tasks = task_input()
+
+task_descriptions = get_task_description(number_of_tasks)
 
 #start()
 #consultant_list()
 #consultant_choice()
 #project_name()
 #task_date()
-task_input()
+
 
 
