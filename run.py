@@ -74,19 +74,6 @@ def project_name():
             print("Project name must be 50 characters or less.")
 
 
-def task_date():
-    """
-    User input for date
-    """
-    while True:
-        date_input = input("Enter a date (YYYY-MM-DD):\n")
-        try:
-            valid_date = datetime.datetime.strptime(date_input, "%Y-%m-%d")
-            print(f"Date {date_input} is valid.")
-            break
-        except ValueError:
-            print("Invalid date format. Please enter the date in YYYY-MM-DD format.")
-
 def task_input():
     """
     User input for number of tasks within a project & naming tasks
@@ -104,22 +91,28 @@ def task_input():
     except ValueError:
         print("Please enter a valid number.")
 
-def get_task_description(number_of_tasks):
+def get_task_information(number_of_tasks):
+    """
+    User input to add descriptions for the number of tasks chosen
+    """
     task_descriptions = []
     for i in range(number_of_tasks):
         description = input(f"Enter description for task {i + 1}:\n")
-        task_descriptions.append(description)
+        date_of_task = input(f"Enter due date for task {i + 1} (YYYY-MM-DD):\n")
+        task_descriptions.append({'description': description, 'date_of_task' : date_of_task})
     return task_descriptions
+
+
+start()
+consultant_list()
+consultant_choice()
+project_name()
 
 number_of_tasks = task_input()
 
-task_descriptions = get_task_description(number_of_tasks)
+task_descriptions = get_task_information(number_of_tasks)
 
-#start()
-#consultant_list()
-#consultant_choice()
-#project_name()
-#task_date()
+
 
 
 
