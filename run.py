@@ -87,14 +87,28 @@ def task_date():
         except ValueError:
             print("Invalid date format. Please enter the date in YYYY-MM-DD format.")
 
+def task_input():
+    """
+    User input for number of tasks within a project & naming tasks
+    """
+    print("Please input the number of tasks for your project")
+    print("Number of tasks should be a number between 1 and 10")
+    
+    try:
+        number_of_tasks = int(input("Enter the number of tasks required for your project:\n"))
+        if number_of_tasks < 1 or number_of_tasks > 10:
+            print("Number of tasks should be a number between 1 and 10")
+        else:
+            print(f"You have entered {number_of_tasks} task(s)")
+    except ValueError:
+        print("Please enter a valid number.")
 
 
-"""
-start()
-consultant_list()
-consultant_choice()
-project_name()
-task_date()
-"""
+#start()
+#consultant_list()
+#consultant_choice()
+#project_name()
+#task_date()
+task_input()
 
 
