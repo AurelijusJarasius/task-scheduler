@@ -120,28 +120,58 @@ def get_task_information(number_of_tasks):
 
     return task_descriptions
 
+
+#if __name__ == "__main__":
+ #   consultant = consultant_choice()
+  #  project = project_name()
+   # number_of_tasks = task_input()
+    #tasks = get_task_information(number_of_tasks)
+    
+#project_data = {
+ #   'consultant': consultant,
+  #  'project_name': project,
+   # 'date_of_task': date_of_task,
+    #'tasks': tasks
+    #}
+
+#print("Project Data:", project_data)
+
+def update_worksheet(project_data):
+    """
+    Upload data to projects worksheet
+    """
+    print("Updating worksheet...\n")
+    projects_worksheet = SHEET.worksheet("projects")
+
+    for task in project_data['tasks']:
+        row = [
+            project_data['consultant'],
+            project_data['project_name'],
+            task['date_of_task'],
+            task['description']
+        ]
+
+    projects_worksheet.append_row(row)
+
+    print("Worksheet updated successfully!\n")
+
 if __name__ == "__main__":
+    start()
+    consultant_list()
     consultant = consultant_choice()
     project = project_name()
     number_of_tasks = task_input()
     tasks = get_task_information(number_of_tasks)
     
-project_data = {
-    'consultant': consultant,
-    'project_name': project,
-    'number_of_tasks': number_of_tasks,
-    'tasks': tasks
+    project_data = {
+        'consultant': consultant,
+        'project_name': project,
+        'number_of_tasks': number_of_tasks,
+        'tasks': tasks
     }
 
-print("Project Data:", project_data)
-
-def update_worksheet(project_data):
-    print("Updating worksheet...\n")
-    projects_worksheet = SHEET.worksheet("projects")
-    projects_worksheet.append_row(project_data)
-    print("Worksheet updated successfully!\n")
-
-update_worksheet(project_data)
+    print("Project Data:", project_data)
+    update_worksheet(project_data)
 
 #start()
 #consultant_list()
