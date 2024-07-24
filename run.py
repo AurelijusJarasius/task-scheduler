@@ -135,6 +135,13 @@ project_data = {
 
 print("Project Data:", project_data)
 
+def update_worksheet(project_data):
+    print("Updating worksheet...\n")
+    projects_worksheet = SHEET.worksheet("projects")
+    projects_worksheet.append_row(project_data)
+    print("Worksheet updated successfully!\n")
+
+update_worksheet(project_data)
 
 #start()
 #consultant_list()
