@@ -1,6 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
-import datetime
+from datetime import datetime
 import re
 
 prog_start = """
@@ -56,11 +56,9 @@ def consultant_choice():
         if user_input in consultant_names:
             user_inputs.append(user_input)
             print(f"Great! You have chosen {user_input}")
-            break
-            return({user_input})
+            return user_input
         else:
             print(f"Invalid input. Please enter a name from the list.")
-            break
 
 def project_name():
     """
@@ -74,10 +72,9 @@ def project_name():
         
         if re.match("^[a-zA-Z\s\.,'\"-]+$", project_name_input):
             print(f"{project_name_input} accepted")
-        
+            return project_name_input
         else:
-            print("Project name must contain text onlyS")
-
+            print("Project name must contain text only")
 
 def task_input():
     """
@@ -102,20 +99,53 @@ def get_task_information(number_of_tasks):
     """
     task_descriptions = []
     for i in range(number_of_tasks):
-        description = input(f"Enter description for task {i + 1}:\n")
-        date_of_task = input(f"Enter due date for task {i + 1} (YYYY-MM-DD):\n")
-        task_descriptions.append({'description': description, 'date_of_task' : date_of_task})
+        while True:
+            description = input(f"Enter description for task {i + 1}:\n")
+
+            if len(description) > 100:
+                print("Description must be 100 characters or less")
+                continue
+            if not re.match("^[a-zA-Z\s\.,'\"-]+$", description):
+                print("Description must contain text only")
+
+            date_of_task = input(f"Enter date for the task {i + 1} (YYYY-MM-DD):\n")
+            try:
+                datetime.strptime(date_of_task, "%Y-%m-%d")
+            except ValueError:
+                print("Please enter a valid date in the format YYYY-MM-DD.")
+                continue
+
+            task_descriptions.append({'description': description, 'date_of_task' : date_of_task})
+            break
+
     return task_descriptions
+
+if __name__ == "__main__":
+    consultant = consultant_choice()
+    project = project_name()
+    number_of_tasks = task_input()
+    tasks = get_task_information(number_of_tasks)
+    
+project_data = {
+    'consultant': consultant,
+    'project_name': project,
+    'number_of_tasks': number_of_tasks,
+    'tasks': tasks
+    }
+
+print("Project Data:", project_data)
 
 
 #start()
 #consultant_list()
 #consultant_choice()
-project_name()
+#project_name()
 
+#task_input()
 #number_of_tasks = task_input()
-
 #task_descriptions = get_task_information(number_of_tasks)
+
+
 
 
 
