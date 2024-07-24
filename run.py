@@ -1,6 +1,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import datetime
+import re
 
 prog_start = """
 
@@ -67,11 +68,15 @@ def project_name():
     """
     while True:
         project_name_input = input("Enter your project name (50 characters max):\n")
-        if len(project_name_input) <= 50:
-            print(f"{project_name_input} accepted")
-            break
-        else:
+        if len(project_name_input) > 50:
             print("Project name must be 50 characters or less.")
+            continue
+        
+        if re.match("^[a-zA-Z\s\.,'\"-]+$", project_name_input):
+            print(f"{project_name_input} accepted")
+        
+        else:
+            print("Project name must contain text onlyS")
 
 
 def task_input():
@@ -103,14 +108,14 @@ def get_task_information(number_of_tasks):
     return task_descriptions
 
 
-start()
-consultant_list()
-consultant_choice()
+#start()
+#consultant_list()
+#consultant_choice()
 project_name()
 
-number_of_tasks = task_input()
+#number_of_tasks = task_input()
 
-task_descriptions = get_task_information(number_of_tasks)
+#task_descriptions = get_task_information(number_of_tasks)
 
 
 
