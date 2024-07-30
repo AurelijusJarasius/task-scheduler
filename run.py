@@ -81,7 +81,7 @@ def project_name():
         else:
             print("Project name must contain text only")
 
-
+# Does not print number of entered tasks
 def task_input():
     """
     User input for number of tasks within a project & naming tasks
@@ -92,7 +92,7 @@ def task_input():
     while True:
         try:
             number_of_tasks = int(input("Enter the number of tasks required for your project:\n"))
-            if number_of_tasks <= 1 or number_of_tasks <= 10:
+            if number_of_tasks > 1 or number_of_tasks < 10:
                 print("Number of tasks should be a number between 1 and 10")
                 return number_of_tasks
             else:
