@@ -6,6 +6,8 @@ re - Regular expression https://docs.python.org/3/library/re.html
 
 raw string - https://www.digitalocean.com/community/tutorials/python-raw-string 
 
+multiple rows - https://stackoverflow.com/questions/69489384/joining-multiple-rows-into-comma-separated-strings-by-group-in-python
+
 Errors
 SyntaxWarning: invalid escape sequence '\ '
   prog_start = """ - Fixed by adding raw string prefix

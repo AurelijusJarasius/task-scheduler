@@ -4,15 +4,11 @@ from datetime import datetime
 import re
 
 prog_start = r"""
-
-  _____                                        _____ _             _   _                   
- |  __ \                                      / ____| |           | | (_)                  
- | |__) | __ ___   __ _ _ __ __ _ _ __ ___   | (___ | |_ __ _ _ __| |_ _ _ __   __ _       
- |  ___/ '__/ _ \ / _` | '__/ _` | '_ ` _ \   \___ \| __/ _` | '__| __| | '_ \ / _` |      
- | |   | | | (_) | (_| | | | (_| | | | | | |  ____) | || (_| | |  | |_| | | | | (_| |_ _ _ 
- |_|   |_|  \___/ \__, |_|  \__,_|_| |_| |_| |_____/ \__\__,_|_|   \__|_|_| |_|\__, (_|_|_)
-                   __/ |                                                        __/ |      
-                  |___/                                                        |___/       
+ _____                              __              _ _               
+|  _  |___ ___ ___ ___ ___ _____   |  |   ___ ___ _| |_|___ ___       
+|   __|  _| . | . |  _| .'|     |  |  |__| . | .'| . | |   | . |_ _ _ 
+|__|  |_| |___|_  |_| |__,|_|_|_|  |_____|___|__,|___|_|_|_|_  |_|_|_|
+              |___|                                        |___|         
 """
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -42,13 +38,13 @@ def consultant_list():
     consultant_data = consultant.get_all_values()
 
     for row in consultant_data:
-        print(" ".join(row))
+        print("-".join(row))
 
 def consultant_choice():
     """
     User input to choose consultant from a fixed list
     """
-    consultant_names = ["Johnny Bravo", "Homer Simpson", "Ned Flanders", "Peter Griffins", "Fred Flinstone"]
+    consultant_names = ["Johnny Bravo", "Homer Simpson", "Ned Flanders", "Peter Griffins", "Fred Flintstone"]
 
     user_inputs = []
 
