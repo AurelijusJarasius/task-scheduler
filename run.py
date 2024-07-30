@@ -142,8 +142,7 @@ def update_worksheet(project_data):
             task['date_of_task'],
             task['description']
         ]
-
-    projects_worksheet.append_row(row)
+        projects_worksheet.append_row(row)
 
     print("Worksheet updated successfully!\n")
 
