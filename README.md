@@ -38,16 +38,26 @@ The application can be viewed on the Code Institute mock terminal on [Heroku](ht
 
 ## User Experience
 ### Initial Discussion
-text
+The idea of creating a basic task scheduler made sense to me as I work as a Project Manager. We use tools to assist with creating schedules, however for small value projects they're over the top and are time consuming to create a simple project/task schedule.
 ### User Stories
 #### First Time Visitor Goals
-text
+- I want to clearly understand what the application is about as soon as the application starts
+- I want clear instructions to follow through the user journey
+- I want to know what data to enter and when a wrong value is entered
+- I want the text to be laid out clearly
+- I want to know when my inputs are accepted
+- I want to be able to choose from a list of consultants
+- I want to be able to input project name
+- I want to be able to input task descriptions
+- I want to be able to input data for task completion
+- I want to be able to see when my inputs are copied across to google docs
 
 #### Returning Visitor Goals
-text
+- I want to be able to add another project when I'm finished with my entry
 
 #### Frequent Visitor Goals
-text
+- I want to be able to edit my entries(future implementation)
+- I want to be able to edit weekly/monthly schedules(future implementation)
 
 ### Design
 text
