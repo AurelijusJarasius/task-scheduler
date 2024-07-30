@@ -40,7 +40,9 @@ def consultant_list():
     print("Choose your prefered consultant from the list\n")
     consultant = SHEET.worksheet("consultant")
     consultant_data = consultant.get_all_values()
-    print(consultant_data)
+
+    for row in consultant_data:
+        print(" ".join(row))
 
 def consultant_choice():
     """
