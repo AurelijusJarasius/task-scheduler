@@ -2,6 +2,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 from datetime import datetime
 import re
+import os
 
 prog_start = r"""
  _____                              __              _ _               
@@ -57,6 +58,10 @@ def consultant_choice():
             return user_input
         else:
             print(f"Invalid input. Please enter a name from the list.")
+            if os.name == 'nt':
+                os.system('cls')
+            else:
+                os.system('clear')
 
 def project_name():
     """
@@ -73,6 +78,7 @@ def project_name():
             return project_name_input
         else:
             print("Project name must contain text only")
+
 
 def task_input():
     """

@@ -8,6 +8,8 @@ raw string - https://www.digitalocean.com/community/tutorials/python-raw-string
 
 multiple rows - https://stackoverflow.com/questions/69489384/joining-multiple-rows-into-comma-separated-strings-by-group-in-python
 
+clear terminal after error - https://teamtreehouse.com/community/ossystemcls-messing-with-my-loop-loop-is-fine-without-the-clear-screen-command-can-someone-explain
+
 Errors
 SyntaxWarning: invalid escape sequence '\ '
   prog_start = """ - Fixed by adding raw string prefix
