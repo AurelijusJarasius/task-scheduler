@@ -85,7 +85,16 @@ text
 ### Languages
 - Python
 ### Frameworks
-text
+- GitHub
+    - Used to store code
+- GitPod
+    - Used for version control by utilising the GitPod terminal to commit to GitHub
+- Heroku
+    - Used to deploy application
+- [PEP8](https://pep8ci.herokuapp.com/)
+    - Used to test the code for errors
+- [ASCII](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
+    - Website based text to ASCII art generator
 
 ## Testing
 ### PEP8 Python Validator
