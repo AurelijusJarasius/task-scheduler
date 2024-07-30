@@ -60,10 +60,20 @@ The idea of creating a basic task scheduler made sense to me as I work as a Proj
 - I want to be able to edit weekly/monthly schedules(future implementation)
 
 ### Design
-text
+The flow of the application is simple and easy to follow. The default black background and white text are used. Appropriate spacing is present throughout to ensure that the content readable. Some artwork is used throughout to welcome users and highlight when data is accepted. The terminal is cleared when an error shows up to improve readability.
 
 #### Flow Chart
-text
+1. Initial Chart
+
+insert image
+
+2. Mid Point Chart
+
+insert image
+
+3. Final Chart
+
+insert image
 
 #### ASCII Art
 text
