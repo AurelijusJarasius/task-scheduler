@@ -44,12 +44,12 @@ def consultant_choice():
     """
     User input to choose consultant from a fixed list
     """
-    consultant_names = ["Johnny Bravo", "Homer Simpson", "Ned Flanders", "Peter Griffins", "Fred Flintstone"]
+    consultant_names = ["JOHNNY BRAVO", "HOMER SIMPSON", "NED FLANDERS", "PETER GRIFFINS", "FRED FLINTSTONE"]
 
     user_inputs = []
 
     while True:
-        user_input = input(f"Select your consultant by their full name:\n")
+        user_input = input(f"Select your consultant by their full name:\n").upper()
     
         if user_input in consultant_names:
             user_inputs.append(user_input)
