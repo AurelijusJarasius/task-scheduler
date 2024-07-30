@@ -104,7 +104,23 @@ text
 
 ## Deployment & Local Development
 ### Deployment
-text
+The site was deployed to Heroku and the following steps were followed to do so:
+1. Log in to heroku.com, click "New" and then “Create new app”.
+2. Give the application a name, choose your region, and Click "Create app".
+3. On the next page, within the "Settings" tab, click on the “Reveal Config Vars” button. In the "KEY" input box type PORT and the
+"VALUE" input box type 8000. Then click on the "Add" button.
+4. Next, click on the “Add buildpack” button. Select “python” and click “Save changes”. Repeat this process to add “nodejs”. It is
+important to add them in this order, with Python on top and NodeJS underneath. If they are the other way around you can click and drag
+to change the order.
+6. When this step is complete select the “Deploy” tab at the top of the page.
+7. In the deployment method section, you can connect with GitHub by selecting “GitHub”.
+8. In the "connect to GitHub" section type the [repository](https://github.com/AurelijusJarasius/task-scheduler) name in, click “Search”,
+and once located click “Connect”.
+9. You can choose to deploy using either the automatic or manual option.
+10. For automatic deploys select “main” for the “Choose a branch to deploy” option. Click “Enable Automatic Deploys” if desired. This
+can be changed at a later date if needed.
+11. To manually deploy select “main” for the “Choose a branch to deploy” option. Click “Deploy Branch”. A message appears saying
+“Your app was successfully deployed” and a “View” button can be clicked to view the application on a new page.
 
 ### Local Development
 text
