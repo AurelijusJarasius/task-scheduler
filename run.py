@@ -51,7 +51,7 @@ def consultant_choice():
     user_inputs = []
 
     while True:
-        user_input = input(f"Select your consultant by their full name: ")
+        user_input = input(f"Select your consultant by their full name:\n")
     
         if user_input in consultant_names:
             user_inputs.append(user_input)
@@ -120,22 +120,6 @@ def get_task_information(number_of_tasks):
 
     return task_descriptions
 
-
-#if __name__ == "__main__":
- #   consultant = consultant_choice()
-  #  project = project_name()
-   # number_of_tasks = task_input()
-    #tasks = get_task_information(number_of_tasks)
-    
-#project_data = {
- #   'consultant': consultant,
-  #  'project_name': project,
-   # 'date_of_task': date_of_task,
-    #'tasks': tasks
-    #}
-
-#print("Project Data:", project_data)
-
 def update_worksheet(project_data):
     """
     Upload data to projects worksheet
@@ -172,15 +156,6 @@ if __name__ == "__main__":
 
     print("Project Data:", project_data)
     update_worksheet(project_data)
-
-#start()
-#consultant_list()
-#consultant_choice()
-#project_name()
-
-#task_input()
-#number_of_tasks = task_input()
-#task_descriptions = get_task_information(number_of_tasks)
 
 
 
