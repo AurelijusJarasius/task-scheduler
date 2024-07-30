@@ -99,6 +99,8 @@ text
 #### Known
 - task_input - does not print # of tasks requested. Instead it prints "Number of tasks should be a number between 1 and 10"
 
+- Clear terminal does not function correctly after error
+
 #### Fixed
 - date_input - date request was before adding in # of tasks required, had to remove the original function and re add it into get_task_information function
 
@@ -139,27 +141,16 @@ text
 text
 
 ### Resources
-text
+- re - Regular expression https://docs.python.org/3/library/re.html
+
+- raw string - https://www.digitalocean.com/community/tutorials/python-raw-string 
+
+- multiple rows - https://stackoverflow.com/questions/69489384/joining-multiple-rows-into-comma-separated-strings-by-group-in-python
+
+- clear terminal after error - https://teamtreehouse.com/community/ossystemcls-messing-with-my-loop-loop-is-fine-without-the-clear-screen-command-can-someone-explain
+
 
 ### Acknowledgments
-text
-
-
-
-
-
-
-
-
-
-
-Recourses
-re - Regular expression https://docs.python.org/3/library/re.html
-
-raw string - https://www.digitalocean.com/community/tutorials/python-raw-string 
-
-multiple rows - https://stackoverflow.com/questions/69489384/joining-multiple-rows-into-comma-separated-strings-by-group-in-python
-
-clear terminal after error - https://teamtreehouse.com/community/ossystemcls-messing-with-my-loop-loop-is-fine-without-the-clear-screen-command-can-someone-explain
-
-
+- My mentor Alan Bushell for always being on point with guidance and support
+- Lewis Dillon at Code Institute for advice & guidance during the weekly stand ups
+- Tutor support at Code Institute for being quick, efficient and percrise with feedback
