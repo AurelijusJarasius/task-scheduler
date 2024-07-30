@@ -41,6 +41,8 @@ def consultant_list():
     for row in consultant_data:
         print("-".join(row))
 
+
+# Clear function doesn't work
 def consultant_choice():
     """
     User input to choose consultant from a fixed list
@@ -87,15 +89,17 @@ def task_input():
     print("Please input the number of tasks for your project")
     print("Number of tasks should be a number between 1 and 10")
     
-    try:
-        number_of_tasks = int(input("Enter the number of tasks required for your project:\n"))
-        if number_of_tasks < 1 or number_of_tasks > 10:
-            print("Number of tasks should be a number between 1 and 10")
-        else:
-            print(f"You have entered {number_of_tasks} task(s)")
-            return number_of_tasks
-    except ValueError:
-        print("Please enter a valid number.")
+    while True:
+        try:
+            number_of_tasks = int(input("Enter the number of tasks required for your project:\n"))
+            if number_of_tasks < 1 or number_of_tasks > 10:
+                print("Number of tasks should be a number between 1 and 10")
+                return number_of_tasks
+            else:
+                print(f"You have entered {number_of_tasks} task(s)")
+        except ValueError:
+            print("Please enter a valid number.")
+
 
 def get_task_information(number_of_tasks):
     """
