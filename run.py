@@ -114,6 +114,7 @@ def get_task_information(number_of_tasks):
                 continue
             if not re.match(r"^[a-zA-Z\s\.,'\"-]+$", description):
                 print("Description must contain text only")
+                continue
 
             date_of_task = input(f"Enter date for the task {i + 1} (YYYY-MM-DD):\n")
             try:
