@@ -70,7 +70,7 @@ def project_name():
             print("Project name must be 50 characters or less.")
             continue
         
-        if re.match("^[a-zA-Z\s\.,'\"-]+$", project_name_input):
+        if re.match(r"^[a-zA-Z\s\.,'\"-]+$", project_name_input):
             print(f"{project_name_input} accepted")
             return project_name_input
         else:
@@ -105,7 +105,7 @@ def get_task_information(number_of_tasks):
             if len(description) > 100:
                 print("Description must be 100 characters or less")
                 continue
-            if not re.match("^[a-zA-Z\s\.,'\"-]+$", description):
+            if not re.match(r"^[a-zA-Z\s\.,'\"-]+$", description):
                 print("Description must contain text only")
 
             date_of_task = input(f"Enter date for the task {i + 1} (YYYY-MM-DD):\n")
