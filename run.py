@@ -5,11 +5,12 @@ import re
 import os
 
 prog_start = r"""
- _____                              __              _ _               
-|  _  |___ ___ ___ ___ ___ _____   |  |   ___ ___ _| |_|___ ___       
-|   __|  _| . | . |  _| .'|     |  |  |__| . | .'| . | |   | . |_ _ _ 
-|__|  |_| |___|_  |_| |__,|_|_|_|  |_____|___|__,|___|_|_|_|_  |_|_|_|
-              |___|                                        |___|         
+ _    _      _                          _ 
+| |  | |    | |                        | |
+| |  | | ___| | ___ ___  _ __ ___   ___| |
+| |/\| |/ _ \ |/ __/ _ \| '_ ` _ \ / _ \ |
+\  /\  /  __/ | (_| (_) | | | | | |  __/_|
+ \/  \/ \___|_|\___\___/|_| |_| |_|\___(_)
 """
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -27,6 +28,7 @@ def main_menu():
     Main menu options for users to select
     """
     while True:
+        print(prog_start)
         print('Main Menu:\n')
         print('1. Instructions\n')
         print('2. Start a new project\n')
