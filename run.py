@@ -23,6 +23,9 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('task_scheduler')
 
 def main_menu():
+    """
+    Main menu options for users to select
+    """
     while True:
         print('Main Menu:\n')
         print('1. Instructions\n')
@@ -49,13 +52,6 @@ def main_menu():
 
 def instructions():
     print('Hello! This is the task scheduler program. I am here to help you schedule your projects with the help of the consultants')
-
-def start():
-    """
-    Program start and welcome message
-    """
-    print(prog_start)
-    print("Hey there! Welcome to the Task Scheduler!\n")
 
 def project_list():
     """
@@ -124,10 +120,10 @@ def task_input():
         try:
             number_of_tasks = int(input("Enter the number of tasks required for your project:\n"))
             if number_of_tasks > 1 or number_of_tasks < 10:
-                print("Number of tasks should be a number between 1 and 10")
+                print(f"You have entered {number_of_tasks} task(s)")
                 return number_of_tasks
             else:
-                print(f"You have entered {number_of_tasks} task(s)")
+                print("Number of tasks should be a number between 1 and 10")
         except ValueError:
             print("Please enter a valid number.")
 
@@ -178,7 +174,6 @@ def update_worksheet(project_data):
     print("Worksheet updated successfully!\n")
 
 def start_new_project():
-    start()
     consultant_list()
     consultant = consultant_choice()
     project = project_name()
