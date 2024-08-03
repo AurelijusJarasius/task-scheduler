@@ -53,7 +53,12 @@ def main_menu():
             print('Invalid choice. Please select a valid option')
 
 def instructions():
-    print('Hello! This is the task scheduler program. I am here to help you schedule your projects with the help of the consultants')
+    print('Thank you for using task scheduler, I am here to help you schedule your projects. Please follow these steps.\n')
+    print('1. Choose your preferred consultant.\n')
+    print('2. Enter the name of the project you are working on.\n')
+    print('3. Enter the number of tasks (between 1 - 10) within your project.\n')
+    print('4. Enter task descriptions.\n')
+    print('5. Enter task dates.\n')
 
 def project_list():
     """
