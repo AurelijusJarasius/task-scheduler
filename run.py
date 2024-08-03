@@ -25,7 +25,7 @@ SHEET = GSPREAD_CLIENT.open('task_scheduler')
 def main_menu():
     while True:
         print('Main Menu:\n')
-        print('1. About\n')
+        print('1. Instructions\n')
         print('2. Start a new project\n')
         print('3. View consultant list\n')
         print('4. Exit')
@@ -33,7 +33,7 @@ def main_menu():
         choice = input('Choose an option (1-4):\n')
 
         if choice == '1':
-            about()
+            instructions()
         elif choice == '2':
             start_new_project()
         elif choice == '3':
@@ -44,15 +44,8 @@ def main_menu():
         else:
             print('Invalid choice. Please select a valid option')
 
-def about():
+def instructions():
     print('Hello! This is the task scheduler program. I am here to help you schedule your projects with the help of the consultants')
-
-def clear_terminal():
-    current_os = platform.system()
-    if current_os == "Windows":
-        os.system('cls')
-    else:
-        os.system('clear')
 
 def start():
     """
@@ -72,8 +65,6 @@ def consultant_list():
     for row in consultant_data:
         print("-".join(row))
 
-
-# Clear function doesn't work
 def consultant_choice():
     """
     User input to choose consultant from a fixed list
@@ -91,8 +82,6 @@ def consultant_choice():
             return user_input
         else:
             print(f"Invalid input. Please enter a name from the list.")
-            
-
 
 def project_name():
     """
@@ -195,7 +184,6 @@ def start_new_project():
 
 if __name__ == "__main__":
     main_menu()
-
 
 
 
