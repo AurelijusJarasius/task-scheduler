@@ -47,6 +47,13 @@ def main_menu():
 def about():
     print('Hello! This is the task scheduler program. I am here to help you schedule your projects with the help of the consultants')
 
+def clear_terminal():
+    current_os = platform.system()
+    if current_os == "Windows":
+        os.system('cls')
+    else:
+        os.system('clear')
+
 def start():
     """
     Program start and welcome message
@@ -85,10 +92,7 @@ def consultant_choice():
         else:
             print(f"Invalid input. Please enter a name from the list.")
             
-        if os.name == 'nt':
-            os.system('cls')
-        else:
-            os.system('clear')
+
 
 def project_name():
     """
