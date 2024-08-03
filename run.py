@@ -28,7 +28,8 @@ def main_menu():
         print('1. Instructions\n')
         print('2. Start a new project\n')
         print('3. View consultant list\n')
-        print('4. Exit')
+        print('4. View project list\n')
+        print('5. Exit\n')
 
         choice = input('Choose an option (1-4):\n')
 
@@ -39,6 +40,8 @@ def main_menu():
         elif choice == '3':
             consultant_list()
         elif choice == '4':
+            project_list()
+        elif choice == '5':
             print('Exiting the program. Goodbye!')
             break
         else:
@@ -53,6 +56,16 @@ def start():
     """
     print(prog_start)
     print("Hey there! Welcome to the Task Scheduler!\n")
+
+def project_list():
+    """
+    Display project list
+    """
+    projects = SHEET.worksheet("projects")
+    project_data = projects.get_all_values()
+
+    for row in project_data:
+        print("-".join(row))
 
 def consultant_list():
     """
