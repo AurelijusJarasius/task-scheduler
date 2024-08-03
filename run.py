@@ -22,6 +22,30 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('task_scheduler')
 
+def main_menu():
+    while True:
+        print('Main Menu:\n')
+        print('1. About\n')
+        print('2. Start a new project\n')
+        print('3. View consultant list\n')
+        print('4. Exit')
+
+        choice = input('Choose an option (1-4):\n')
+
+        if choice == '1':
+            about()
+        elif choice == '2':
+            start_new_project()
+        elif choice == '3':
+            consultant_list()
+        elif choice == '4':
+            print('Exiting the program. Goodbye!')
+            break
+        else:
+            print('Invalid choice. Please select a valid option')
+
+def about():
+    print('Hello! This is the task scheduler program. I am here to help you schedule your projects with the help of the consultants')
 
 def start():
     """
@@ -60,10 +84,11 @@ def consultant_choice():
             return user_input
         else:
             print(f"Invalid input. Please enter a name from the list.")
-            if os.name == 'nt':
-                os.system('cls')
-            else:
-                os.system('clear')
+            
+        if os.name == 'nt':
+            os.system('cls')
+        else:
+            os.system('clear')
 
 def project_name():
     """
@@ -147,6 +172,7 @@ def update_worksheet(project_data):
     print("Worksheet updated successfully!\n")
 
 if __name__ == "__main__":
+    main_menu()
     start()
     consultant_list()
     consultant = consultant_choice()
