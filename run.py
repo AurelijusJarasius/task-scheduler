@@ -171,8 +171,7 @@ def update_worksheet(project_data):
 
     print("Worksheet updated successfully!\n")
 
-if __name__ == "__main__":
-    main_menu()
+def start_new_project():
     start()
     consultant_list()
     consultant = consultant_choice()
@@ -190,6 +189,8 @@ if __name__ == "__main__":
     print("Project Data:", project_data)
     update_worksheet(project_data)
 
+if __name__ == "__main__":
+    main_menu()
 
 
 
