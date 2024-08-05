@@ -80,12 +80,36 @@ text
 
 ## Features
 - The program begins with a welcome message in ASCII art at the top of the terminal. Followed by the menu options prompting the user to make a choice.
-![]img
+![Program Start](docs/screenshots/program_start.png)
 
 - Number 1 Introduction. This section explains to the user how the program works and outlines the steps
-![]img
+![Introduction](docs/screenshots/introduction.png)
 
-- Number 2 Start a new project. This is the main program,
+- Number 2 Start a new project. This is the main program, users are prompted for consultant choice, project name, number of tasks, task description and dates.
+    - Consultant Choice - users are provided with a list of consultants to choose from and are prompted to input their full name.
+    ![Consultant choice](docs/screenshots/start_new_project.png)
+    - Project Name - users are prompted to input the name of the project with maximum of 50 characters.
+    ![Project name](docs/screenshots/project_name.png)
+    - Number of Tasks - users are prompted to input the number of tasks within their project. Range of tasks is 1 to 10.
+    ![Number of tasks](docs/screenshots/number_of_tasks.png)
+    - Task Description - users are prompted to input the description for each task
+    ![Task description](docs/screenshots/task_description_dates.png)
+    - Task Date - users are prompted to input the date for each task
+    ![Task date](docs/screenshots/task_description_dates.png)
+    - Project Info - when all inputs are entered, project data is then printed in the terminal to show what has been entered
+    ![Project info](docs/screenshots/project_info.png)
+    - Google Docs - Entries are then added to google docs
+    ![Google Docs](docs/screenshots/google_docs.png)
+
+- Number 3 View Consultant list - users can see the list of consultants and their skills that they wish to use for their projects.
+![Consultant List](docs/screenshots/consultant_list.png)
+
+- Number 4 View Projects - users can see the list of current projects added.
+![Project List](docs/screenshots/project_list.png)
+
+- Number 5 Exit - users can exit the program.
+![Exit](docs/screenshots/Exit.png)
+
 ## Technologies Used
 ### Languages
 - Python
