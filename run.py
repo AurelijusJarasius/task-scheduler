@@ -27,6 +27,9 @@ SHEET = GSPREAD_CLIENT.open('task_scheduler')
 print(prog_start)
 
 def clear_terminal():
+    """
+    Function to clear terminal
+    """
     current_os = platform.system()
     if current_os == "Windows":
         os.system('cls')
@@ -71,6 +74,9 @@ def main_menu():
             print('Invalid choice. Please select a valid option')
 
 def instructions():
+    """
+    Main menu instructions
+    """
     print('Thank you for using task scheduler, I am here to help you schedule your projects. Please follow these steps.\n')
     print('1. Choose your preferred consultant.\n')
     print('2. Enter the name of the project you are working on.\n')
@@ -218,6 +224,9 @@ def update_worksheet(project_data):
     print("Worksheet updated successfully!\n")
 
 def start_new_project():
+    """
+    Function to start a new project
+    """
     consultant_list()
     consultant = consultant_choice()
     project = project_name()
