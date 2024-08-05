@@ -3,6 +3,7 @@ from google.oauth2.service_account import Credentials
 from datetime import datetime
 import re
 import os
+import platform
 
 prog_start = r"""
  _    _      _                          _ 
@@ -25,35 +26,48 @@ SHEET = GSPREAD_CLIENT.open('task_scheduler')
 
 print(prog_start)
 
+def clear_terminal():
+    current_os = platform.system()
+    if current_os == "Windows":
+        os.system('cls')
+    else:
+        os.system('clear')
+
 def main_menu():
     """
     Main menu options for users to select
     """
-    print('Please choose from the following options')
-    print('Main Menu:\n')
-    print('1. Instructions\n')
-    print('2. Start a new project\n')
-    print('3. View consultant list\n')
-    print('4. View project list\n')
-    print('5. Exit\n')
+    while True:
+        clear_terminal()
+        print(prog_start)
+        print('Please choose from the following options')
+        print('Main Menu:\n')
+        print('1. Instructions\n')
+        print('2. Start a new project\n')
+        print('3. View consultant list\n')
+        print('4. View project list\n')
+        print('5. Exit\n')
 
-    choice = input('Choose an option (1-5):\n')
+        choice = input('Choose an option (1-5):\n')
 
-    if choice == '1':
-        instructions()
-    elif choice == '2':
-        start_new_project()
-    elif choice == '3':
-        consultant_list()
-    elif choice == '4':
-        project_list()
-    elif choice == '5':
-        print('Exiting the program. Goodbye!')
-        return
-    else:
-        print('Invalid choice. Please select a valid option')
-
-    main_menu()
+        if choice == '1':
+            clear_terminal()
+            instructions()
+        elif choice == '2':
+            start_new_project()
+        elif choice == '3':
+            clear_terminal()
+            consultant_list()
+        elif choice == '4':
+            clear_terminal()
+            project_list()
+        elif choice == '5':
+            clear_terminal()
+            print('Exiting the program. Goodbye!')
+            break
+        else:
+            clear_terminal()
+            print('Invalid choice. Please select a valid option')
 
 def instructions():
     print('Thank you for using task scheduler, I am here to help you schedule your projects. Please follow these steps.\n')
@@ -191,13 +205,6 @@ def update_worksheet(project_data):
 
     print("Worksheet updated successfully!\n")
 
-def clear_terminal():
-    current_os = platform.system()
-    if current_os == "Windows":
-        os.system('cls')
-    else:
-        os.system('clear')
-
 def start_new_project():
     consultant_list()
     consultant = consultant_choice()
@@ -214,6 +221,8 @@ def start_new_project():
 
     print("Project Data:", project_data)
     update_worksheet(project_data)
+    input('Press Enter to return to the main menu.')
+    main_menu()
 
 if __name__ == "__main__":
     main_menu()
