@@ -182,6 +182,13 @@ def update_worksheet(project_data):
 
     print("Worksheet updated successfully!\n")
 
+def clear_terminal():
+    current_os = platform.system()
+    if current_os == "Windows":
+        os.system('cls')
+    else:
+        os.system('clear')
+
 def start_new_project():
     consultant_list()
     consultant = consultant_choice()
