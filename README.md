@@ -79,8 +79,13 @@ insert image
 text
 
 ## Features
-text
+- The program begins with a welcome message in ASCII art at the top of the terminal. Followed by the menu options prompting the user to make a choice.
+![]img
 
+- Number 1 Introduction. This section explains to the user how the program works and outlines the steps
+![]img
+
+- Number 2 Start a new project. This is the main program,
 ## Technologies Used
 ### Languages
 - Python

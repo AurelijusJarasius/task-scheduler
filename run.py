@@ -130,10 +130,6 @@ def consultant_choice():
     user_input = []
 
     while True:
-        print("Available consultants:")
-        for name in consultant_names:
-            print(name)
-        
         user_input = input("Select your consultant by their full name:\n").upper()
     
         if user_input in consultant_names:
