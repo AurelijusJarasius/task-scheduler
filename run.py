@@ -29,30 +29,31 @@ def main_menu():
     """
     Main menu options for users to select
     """
-    while True:
-        print('Please choose from the following options')
-        print('Main Menu:\n')
-        print('1. Instructions\n')
-        print('2. Start a new project\n')
-        print('3. View consultant list\n')
-        print('4. View project list\n')
-        print('5. Exit\n')
+    print('Please choose from the following options')
+    print('Main Menu:\n')
+    print('1. Instructions\n')
+    print('2. Start a new project\n')
+    print('3. View consultant list\n')
+    print('4. View project list\n')
+    print('5. Exit\n')
 
-        choice = input('Choose an option (1-4):\n')
+    choice = input('Choose an option (1-5):\n')
 
-        if choice == '1':
-            instructions()
-        elif choice == '2':
-            start_new_project()
-        elif choice == '3':
-            consultant_list()
-        elif choice == '4':
-            project_list()
-        elif choice == '5':
-            print('Exiting the program. Goodbye!')
-            break
-        else:
-            print('Invalid choice. Please select a valid option')
+    if choice == '1':
+        instructions()
+    elif choice == '2':
+        start_new_project()
+    elif choice == '3':
+        consultant_list()
+    elif choice == '4':
+        project_list()
+    elif choice == '5':
+        print('Exiting the program. Goodbye!')
+        return
+    else:
+        print('Invalid choice. Please select a valid option')
+
+    main_menu()
 
 def instructions():
     print('Thank you for using task scheduler, I am here to help you schedule your projects. Please follow these steps.\n')
@@ -61,6 +62,8 @@ def instructions():
     print('3. Enter the number of tasks (between 1 - 10) within your project.\n')
     print('4. Enter task descriptions.\n')
     print('5. Enter task dates.\n')
+    input('Press Enter to return to the main menu')
+    main_menu()
 
 def project_list():
     """
@@ -71,6 +74,9 @@ def project_list():
 
     for row in project_data:
         print("-".join(row))
+    
+    input('Press Enter to return to the main menu')
+    main_menu()
 
 def consultant_list():
     """
@@ -82,6 +88,9 @@ def consultant_list():
 
     for row in consultant_data:
         print("-".join(row))
+
+    input('Press Enter to return to the main menu')
+    main_menu()
 
 def consultant_choice():
     """
