@@ -54,6 +54,7 @@ def main_menu():
             clear_terminal()
             instructions()
         elif choice == '2':
+            clear_terminal()
             start_new_project()
         elif choice == '3':
             clear_terminal()
@@ -103,22 +104,22 @@ def consultant_list():
     for row in consultant_data:
         print("-".join(row))
 
-    input('Press Enter to return to the main menu')
-    main_menu()
-
 def consultant_choice():
     """
     User input to choose consultant from a fixed list
     """
     consultant_names = ["JOHNNY BRAVO", "HOMER SIMPSON", "NED FLANDERS", "PETER GRIFFINS", "FRED FLINTSTONE"]
 
-    user_inputs = []
+    user_input = []
 
     while True:
-        user_input = input(f"Select your consultant by their full name:\n").upper()
+        print("Available consultants:")
+        for name in consultant_names:
+            print(name)
+        
+        user_input = input("Select your consultant by their full name:\n").upper()
     
         if user_input in consultant_names:
-            user_inputs.append(user_input)
             print(f"Great! You have chosen {user_input}")
             return user_input
         else:
@@ -151,7 +152,7 @@ def task_input():
     while True:
         try:
             number_of_tasks = int(input("Enter the number of tasks required for your project:\n"))
-            if number_of_tasks > 1 or number_of_tasks < 10:
+            if 1 <= number_of_tasks <= 10:
                 print(f"You have entered {number_of_tasks} task(s)")
                 return number_of_tasks
             else:
@@ -221,7 +222,7 @@ def start_new_project():
 
     print("Project Data:", project_data)
     update_worksheet(project_data)
-    input('Press Enter to return to the main menu.')
+    input("Press Enter to return to the main menu.")
     main_menu()
 
 if __name__ == "__main__":
