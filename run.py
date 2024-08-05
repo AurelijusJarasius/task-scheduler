@@ -23,12 +23,14 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('task_scheduler')
 
+print(prog_start)
+
 def main_menu():
     """
     Main menu options for users to select
     """
     while True:
-        print(prog_start)
+        print('Please choose from the following options')
         print('Main Menu:\n')
         print('1. Instructions\n')
         print('2. Start a new project\n')
