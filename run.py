@@ -78,7 +78,6 @@ def instructions():
     print('4. Enter task descriptions.\n')
     print('5. Enter task dates.\n')
     input('Press Enter to return to the main menu')
-    main_menu()
 
 def project_list():
     """
@@ -91,7 +90,6 @@ def project_list():
         print("-".join(row))
     
     input('Press Enter to return to the main menu')
-    main_menu()
 
 def consultant_list_menu():
     """
@@ -105,7 +103,6 @@ def consultant_list_menu():
         print("-".join(row))
     
     input('Press Enter to return to the main menu')
-    main_menu()
 
 def consultant_list():
     """
@@ -237,7 +234,6 @@ def start_new_project():
     print("Project Data:", project_data)
     update_worksheet(project_data)
     input("Press Enter to return to the main menu.")
-    main_menu()
 
 if __name__ == "__main__":
     main_menu()
