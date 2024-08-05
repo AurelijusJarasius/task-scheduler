@@ -6,7 +6,7 @@ import os
 import platform
 
 prog_start = r"""
- _    _      _                          _ 
+ _    _      _                          _
 | |  | |    | |                        | |
 | |  | | ___| | ___ ___  _ __ ___   ___| |
 | |/\| |/ _ \ |/ __/ _ \| '_ ` _ \ / _ \ |
@@ -26,6 +26,7 @@ SHEET = GSPREAD_CLIENT.open('task_scheduler')
 
 print(prog_start)
 
+
 def clear_terminal():
     """
     Function to clear terminal
@@ -35,6 +36,7 @@ def clear_terminal():
         os.system('cls')
     else:
         os.system('clear')
+
 
 def main_menu():
     """
@@ -73,17 +75,21 @@ def main_menu():
             clear_terminal()
             print('Invalid choice. Please select a valid option')
 
+
 def instructions():
     """
     Main menu instructions
     """
-    print('Thank you for using task scheduler, I am here to help you schedule your projects. Please follow these steps.\n')
+    print('Thank you for using task scheduler, I am here to help you schedule\
+          your projects. Please follow these steps.\n')
     print('1. Choose your preferred consultant.\n')
     print('2. Enter the name of the project you are working on.\n')
-    print('3. Enter the number of tasks (between 1 - 10) within your project.\n')
+    print('3. Enter the number of tasks (between 1 - 10)\
+          within your project.\n')
     print('4. Enter task descriptions.\n')
     print('5. Enter task dates.\n')
     input('Press Enter to return to the main menu')
+
 
 def project_list():
     """
@@ -94,8 +100,8 @@ def project_list():
 
     for row in project_data:
         print("-".join(row))
-    
     input('Press Enter to return to the main menu')
+
 
 def consultant_list_menu():
     """
@@ -107,8 +113,8 @@ def consultant_list_menu():
 
     for row in consultant_data:
         print("-".join(row))
-    
     input('Press Enter to return to the main menu')
+
 
 def consultant_list():
     """
@@ -121,50 +127,53 @@ def consultant_list():
     for row in consultant_data:
         print("-".join(row))
 
+
 def consultant_choice():
     """
     User input to choose consultant from a fixed list
     """
-    consultant_names = ["JOHNNY BRAVO", "HOMER SIMPSON", "NED FLANDERS", "PETER GRIFFINS", "FRED FLINTSTONE"]
+    consultant_names = ["JOHNNY BRAVO", "HOMER SIMPSON", "NED FLANDERS",
+                        "PETER GRIFFINS", "FRED FLINTSTONE"]
 
     user_input = []
 
     while True:
-        user_input = input("Select your consultant by their full name:\n").upper()
-    
+        user_input = input("Select your consultant by their full name:\n")\
+                          .upper()
         if user_input in consultant_names:
             print(f"Great! You have chosen {user_input}")
             return user_input
         else:
             print(f"Invalid input. Please enter a name from the list.")
 
+
 def project_name():
     """
     User input to enter name of their project
     """
     while True:
-        project_name_input = input("Enter your project name (50 characters max):\n")
+        project_name_input = input("Enter your project name\
+                                  (50 characters max):\n")
         if len(project_name_input) > 50:
             print("Project name must be 50 characters or less.")
             continue
-        
         if re.match(r"^[a-zA-Z\s\.,'\"-]+$", project_name_input):
             print(f"{project_name_input} accepted")
             return project_name_input
         else:
             print("Project name must contain text only")
 
-# Does not print number of entered tasks
+
 def task_input():
     """
     User input for number of tasks within a project & naming tasks
     """
     print("Please input the number of tasks for your project")
     print("Number of tasks should be a number between 1 and 10")
-    
     while True:
         try:
-            number_of_tasks = int(input("Enter the number of tasks required for your project:\n"))
+            number_of_tasks = int(input("Enter the number of tasks required\
+                                        for your project:\n"))
             if 1 <= number_of_tasks <= 10:
                 print(f"You have entered {number_of_tasks} task(s)")
                 return number_of_tasks
@@ -172,6 +181,7 @@ def task_input():
                 print("Number of tasks should be a number between 1 and 10")
         except ValueError:
             print("Please enter a valid number.")
+
 
 def get_task_information(number_of_tasks):
     """
@@ -189,17 +199,19 @@ def get_task_information(number_of_tasks):
                 print("Description must contain text only")
                 continue
 
-            date_of_task = input(f"Enter date for the task {i + 1} (YYYY-MM-DD):\n")
+            date_of_task = input(f"Enter date for the task {i + 1}\
+                                (YYYY-MM-DD):\n")
             try:
                 datetime.strptime(date_of_task, "%Y-%m-%d")
             except ValueError:
                 print("Please enter a valid date in the format YYYY-MM-DD.")
                 continue
-
-            task_descriptions.append({'description': description, 'date_of_task' : date_of_task})
+            task_descriptions.append({'description': description,
+                                     'date_of_task': date_of_task})
             break
 
     return task_descriptions
+
 
 def update_worksheet(project_data):
     """
@@ -219,6 +231,7 @@ def update_worksheet(project_data):
 
     print("Worksheet updated successfully!\n")
 
+
 def start_new_project():
     """
     Function to start a new project
@@ -228,7 +241,6 @@ def start_new_project():
     project = project_name()
     number_of_tasks = task_input()
     tasks = get_task_information(number_of_tasks)
-    
     project_data = {
         'consultant': consultant,
         'project_name': project,
@@ -240,10 +252,6 @@ def start_new_project():
     update_worksheet(project_data)
     input("Press Enter to return to the main menu.")
 
+
 if __name__ == "__main__":
     main_menu()
-
-
-
-
-

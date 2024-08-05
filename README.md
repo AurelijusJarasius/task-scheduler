@@ -102,12 +102,15 @@ text
     ![Google Docs](docs/screenshots/google_docs.png)
 
 - Number 3 View Consultant list - users can see the list of consultants and their skills that they wish to use for their projects.
+
 ![Consultant List](docs/screenshots/consultant_list.png)
 
 - Number 4 View Projects - users can see the list of current projects added.
+
 ![Project List](docs/screenshots/project_list.png)
 
 - Number 5 Exit - users can exit the program.
+
 ![Exit](docs/screenshots/Exit.png)
 
 ## Technologies Used
