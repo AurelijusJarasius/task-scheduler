@@ -131,10 +131,21 @@ text
 ## Testing
 ### PEP8 Python Validator
 #### Python
-test
+- All clear no errors found
+![Pep8](docs/testing/pep8.png)
 
 ### Manual
-text
+- All input fields have been tested manually
+    - Consultant Choice
+    ![Validation consultant choice](docs/testing/validation_consultant_choice.png)
+    - Project Name
+    ![Validation project name](docs/testing/validation_project_name.png)
+    - Number of Tasks
+    ![Validation number of tasks](docs/testing/validation_number_of_tasks.png)
+    - Task Description
+    ![Validation task description](docs/testing/validation_task_description.png)
+    - Task Date
+    ![Validation task date](docs/testing/validation_project_date.png)
 
 ### Testing User Stories from User Experience (UX) Section
 #### First Time Visitor Goals
