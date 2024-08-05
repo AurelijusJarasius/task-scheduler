@@ -41,7 +41,6 @@ The application can be viewed on the Code Institute mock terminal on [Heroku](ht
 The idea of creating a basic task scheduler made sense to me as I work as a Project Manager. We use tools to assist with creating schedules, however for small value projects they're over the top and are time consuming to create a simple project/task schedule.
 ### User Stories
 #### First Time Visitor Goals
-- I want to clearly understand what the application is about as soon as the application starts
 - I want clear instructions to follow through the user journey
 - I want to know what data to enter and when a wrong value is entered
 - I want the text to be laid out clearly
@@ -49,7 +48,7 @@ The idea of creating a basic task scheduler made sense to me as I work as a Proj
 - I want to be able to choose from a list of consultants
 - I want to be able to input project name
 - I want to be able to input task descriptions
-- I want to be able to input data for task completion
+- I want to be able to input date for task completion
 - I want to be able to see when my inputs are copied across to google docs
 
 #### Returning Visitor Goals
@@ -149,13 +148,47 @@ text
 
 ### Testing User Stories from User Experience (UX) Section
 #### First Time Visitor Goals
-text
+- I want clear instructions to follow through the user journey
+![]()
+
+- I want to know what data to enter and when a wrong value is entered
+    - Data validation is present across all manual input fields
+
+- I want the text to be laid out clearly
+![]()
+
+- I want to know when my inputs are accepted
+    - Inputs display acceptance messaging
+
+![Input acceptance](docs/testing/ux_input_acceptance.png)
+
+- I want to be able to choose from a list of consultants
+
+![Consultant list](docs/screenshots/consultant_list.png)
+
+- I want to be able to input project name
+
+![Project name](docs/screenshots/project_name.png)
+
+- I want to be able to input task descriptions
+
+![Task description](docs/screenshots/task_description_dates.png)
+
+- I want to be able to input date for task completion
+
+![Task date](docs/screenshots/task_description_dates.png)
+
+- I want to be able to see when my inputs are copied across to google docs
+
+![Project data](docs/screenshots/project_info.png)
 
 #### Returning Visitor Goals
-text
+- I want to be able to add another project when I'm finished with my entry
+
+![Return to main menu](docs/testing/ux_main_menu.png)
 
 #### Frequent Visitor Goals
-text
+- Features to be implemented in future development releases
 
 ### Bugs
 #### Known
