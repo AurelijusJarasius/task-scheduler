@@ -58,7 +58,7 @@ def main_menu():
             start_new_project()
         elif choice == '3':
             clear_terminal()
-            consultant_list()
+            consultant_list_menu()
         elif choice == '4':
             clear_terminal()
             project_list()
@@ -88,6 +88,20 @@ def project_list():
     project_data = projects.get_all_values()
 
     for row in project_data:
+        print("-".join(row))
+    
+    input('Press Enter to return to the main menu')
+    main_menu()
+
+def consultant_list_menu():
+    """
+    Display consultant list
+    """
+    print("List of consultants and their current skills\n")
+    consultant = SHEET.worksheet("consultant")
+    consultant_data = consultant.get_all_values()
+
+    for row in consultant_data:
         print("-".join(row))
     
     input('Press Enter to return to the main menu')
