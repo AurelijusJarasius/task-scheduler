@@ -80,12 +80,12 @@ def instructions():
     """
     Main menu instructions
     """
-    print('Thank you for using task scheduler, I am here to help you schedule\
-          your projects. Please follow these steps.\n')
+    print('Thank you for using task scheduler, I am here to help you schedule'
+          'your projects. Please follow these steps.\n')
     print('1. Choose your preferred consultant.\n')
     print('2. Enter the name of the project you are working on.\n')
-    print('3. Enter the number of tasks (between 1 - 10)\
-          within your project.\n')
+    print('3. Enter the number of tasks (between 1 - 10)'
+          'within your project.\n')
     print('4. Enter task descriptions.\n')
     print('5. Enter task dates.\n')
     input('Press Enter to return to the main menu')
@@ -152,8 +152,8 @@ def project_name():
     User input to enter name of their project
     """
     while True:
-        project_name_input = input("Enter your project name\
-                                  (50 characters max):\n")
+        project_name_input = input('Enter your project name'
+                                   '(50 characters max):\n')
         if len(project_name_input) > 50:
             print("Project name must be 50 characters or less.")
             continue
@@ -172,8 +172,8 @@ def task_input():
     print("Number of tasks should be a number between 1 and 10")
     while True:
         try:
-            number_of_tasks = int(input("Enter the number of tasks required\
-                                        for your project:\n"))
+            number_of_tasks = int(input('Enter the number of tasks required'
+                                        'for your project:\n'))
             if 1 <= number_of_tasks <= 10:
                 print(f"You have entered {number_of_tasks} task(s)")
                 return number_of_tasks
@@ -199,8 +199,8 @@ def get_task_information(number_of_tasks):
                 print("Description must contain text only")
                 continue
 
-            date_of_task = input(f"Enter date for the task {i + 1}\
-                                (YYYY-MM-DD):\n")
+            date_of_task = input(f"Enter date for the task {i + 1}"
+                                 "(YYYY-MM-DD):\n")
             try:
                 datetime.strptime(date_of_task, "%Y-%m-%d")
             except ValueError:
