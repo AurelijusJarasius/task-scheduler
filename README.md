@@ -64,15 +64,15 @@ The flow of the application is simple and easy to follow. The default black back
 #### Flow Chart
 1. Initial Chart
 
-insert image
+![Initial chart](docs/screenshots/flowchart_1.png)
 
 2. Mid Point Chart
 
-insert image
+![Mid point chart](docs/screenshots/flowchart_2.png)
 
 3. Final Chart
 
-insert image
+![Final chart](docs/screenshots/flowchart_3.png)
 
 #### ASCII Art
 text
@@ -158,13 +158,13 @@ text
 ### Testing User Stories from User Experience (UX) Section
 #### First Time Visitor Goals
 - I want clear instructions to follow through the user journey
-![]()
+    - Each user input section has a description on what the user needs to input including characters, number of characters and date format
 
 - I want to know what data to enter and when a wrong value is entered
     - Data validation is present across all manual input fields
 
 - I want the text to be laid out clearly
-![]()
+![Text layout](docs/testing/ux_input_acceptance.png)
 
 - I want to know when my inputs are accepted
     - Inputs display acceptance messaging
@@ -238,11 +238,39 @@ can be changed at a later date if needed.
 “Your app was successfully deployed” and a “View” button can be clicked to view the application on a new page.
 
 ### Local Development
-text
+The steps below describe how to fork or clone the repository if desired.
+#### How to Fork
+1. Log in to GitHub.
+2. Navigate to the [repository](https://github.com/AurelijusJarasius/task-scheduler) for this website.
+3. Click the "Fork" button in the top right corner.
+4. You will be brought to a new page with a short form to be completed.
+5. Upon completing, click on the "Create fork" button and this will create a fork of the repository in your personal account.
+
+#### How to Clone
+1. Log in to GitHub.
+2. Navigate to the [repository](https://github.com/AurelijusJarasius/task-scheduler) for this website.
+3. Click on the "Code" button and a modal will appear.
+4. Within this modal select the "local" tab.
+5. Within this tab, there are "HTTPS", "SSH", or "GitHub CLI" tabs.
+6. Click on the "HTTPS" tab and copy the link shown.
+7. In your development environment open the terminal.
+8. Change the current working directory to the location where you want the cloned directory to be.
+9. Type "git clone" into the terminal, then paste the URL you copied in step 6.
+10. Press **Enter** to create your local clone.
 
 ## Credits
 ### Code Used
-text
+- OS Clear - function shared by my mentor Alan
+
+- ChatGPT - update_worksheet code below was used to organise data into separate rows
+
+for task in project_data['tasks']:
+        row = [
+            project_data['consultant'],
+            project_data['project_name'],
+            task['date_of_task'],
+            task['description']
+        ]
 
 ### Resources
 - re - Regular expression https://docs.python.org/3/library/re.html
@@ -253,6 +281,13 @@ text
 
 - clear terminal after error - https://teamtreehouse.com/community/ossystemcls-messing-with-my-loop-loop-is-fine-without-the-clear-screen-command-can-someone-explain
 
+- ASCII Text to art generator - https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
+
+- Slack - researching various issues encountered through search functions and threads in slack.
+
+- ChatGPT
+
+- Course content
 
 ### Acknowledgments
 - My mentor Alan Bushell for always being on point with guidance and support
