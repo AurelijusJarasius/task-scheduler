@@ -14,7 +14,7 @@ The application can be viewed on the Code Institute mock terminal on [Heroku](ht
         - [Flow Chart](#flow-chart)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-    - [Languagues](#languages)
+    - [Languages](#languages)
     - [Frameworks](#frameworks)
 - [Testing](#testing)
     - [PEP8 Python Validator](#pep8-python-validator)
@@ -160,9 +160,7 @@ Number 2 Start a new project. This is the main program, users are prompted for c
 
 ### Bugs
 #### Known
-- task_input - does not print # of tasks requested. Instead it prints "Number of tasks should be a number between 1 and 10"
 
-- Clear terminal does not function correctly after error
 
 #### Fixed
 - date_input - date request was before adding in # of tasks required, had to remove the original function and re add it into get_task_information function
@@ -175,6 +173,10 @@ Number 2 Start a new project. This is the main program, users are prompted for c
 
 - SyntaxWarning: invalid escape sequence '\s'
   if re.match("^[a-zA-Z\s\.,'\"-]+$", get_task_information): - Fixed by adding raw string prefix
+
+- task_input - does not print # of tasks requested. Instead it prints "Number of tasks should be a number between 1 and 10"
+
+- Clear terminal does not function correctly after error
 
 ## Deployment & Local Development
 ### Deployment
@@ -253,4 +255,4 @@ for task in project_data['tasks']:
 ### Acknowledgments
 - My mentor Alan Bushell for always being on point with guidance and support
 - Lewis Dillon at Code Institute for advice & guidance during the weekly stand ups
-- Tutor support at Code Institute for being quick, efficient and percrise with feedback
+- Tutor support at Code Institute for being quick, efficient and percise with feedback
