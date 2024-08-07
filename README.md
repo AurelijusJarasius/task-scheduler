@@ -75,51 +75,29 @@ The flow of the application is simple and easy to follow. The default black back
 ![Final chart](docs/screenshots/flowchart_3.png)
 
 #### ASCII Art
-text
+Welcome! Message when program starts
+
+![ASCII](docs/screenshots/ascii_art.png)
 
 ## Features
-- The program begins with a welcome message in ASCII art at the top of the terminal. Followed by the menu options prompting the user to make a choice.
+| Feature | View |
+|--|--|
+|The program begins with a welcome message in ASCII art at the top of the terminal. Followed by the menu options prompting the user to make a choice.|![Program Start](docs/screenshots/program_start.png) |
+|Number 1 Introduction. This section explains to the user how the program works and outlines the steps|![Introduction](docs/screenshots/introduction.png)|
 
-![Program Start](docs/screenshots/program_start.png)
-
-- Number 1 Introduction. This section explains to the user how the program works and outlines the steps
-
-![Introduction](docs/screenshots/introduction.png)
-
-- Number 2 Start a new project. This is the main program, users are prompted for consultant choice, project name, number of tasks, task description and dates.
-    - Consultant Choice - users are provided with a list of consultants to choose from and are prompted to input their full name.
-
-    ![Consultant choice](docs/screenshots/start_new_project.png)
-    - Project Name - users are prompted to input the name of the project with maximum of 50 characters.
-
-    ![Project name](docs/screenshots/project_name.png)
-    - Number of Tasks - users are prompted to input the number of tasks within their project. Range of tasks is 1 to 10.
-
-    ![Number of tasks](docs/screenshots/number_of_tasks.png)
-    - Task Description - users are prompted to input the description for each task
-
-    ![Task description](docs/screenshots/task_description_dates.png)
-    - Task Date - users are prompted to input the date for each task
-
-    ![Task date](docs/screenshots/task_description_dates.png)
-    - Project Info - when all inputs are entered, project data is then printed in the terminal to show what has been entered
-
-    ![Project info](docs/screenshots/project_info.png)
-    - Google Docs - Entries are then added to google docs
-    
-    ![Google Docs](docs/screenshots/google_docs.png)
-
-- Number 3 View Consultant list - users can see the list of consultants and their skills that they wish to use for their projects.
-
-![Consultant List](docs/screenshots/consultant_list.png)
-
-- Number 4 View Projects - users can see the list of current projects added.
-
-![Project List](docs/screenshots/project_list.png)
-
-- Number 5 Exit - users can exit the program.
-
-![Exit](docs/screenshots/Exit.png)
+Number 2 Start a new project. This is the main program, users are prompted for consultant choice, project name, number of tasks, task description and dates.
+| Number 2 Features | View |
+|--|--|
+|Consultant Choice - users are provided with a list of consultants to choose from and are prompted to input their full name.| ![Consultant choice](docs/screenshots/start_new_project.png)|
+|Project Name - users are prompted to input the name of the project with maximum of 50 characters.|![Project name](docs/screenshots/project_name.png)|
+|Number of Tasks - users are prompted to input the number of tasks within their project. Range of tasks is 1 to 10.|![Number of tasks](docs/screenshots/number_of_tasks.png)|
+|Task Description - users are prompted to input the description for each task.|![Task description](docs/screenshots/task_description_dates.png)|
+|Task Date - users are prompted to input the date for each task|![Task date](docs/screenshots/task_description_dates.png)|
+|Project Info - when all inputs are entered, project data is then printed in the terminal to show what has been entered|![Project info](docs/screenshots/project_info.png)|
+|Google Docs - Entries are then added to google docs|![Google Docs](docs/screenshots/google_docs.png)|
+|Number 3 View Consultant list - users can see the list of consultants and their skills that they wish to use for their projects.|![Consultant List](docs/screenshots/consultant_list.png)|
+|Number 4 View Projects - users can see the list of current projects added.|![Project List](docs/screenshots/project_list.png)|
+|Number 5 Exit - users can exit the program.|![Exit](docs/screenshots/Exit.png)|
 
 ## Technologies Used
 ### Languages
@@ -144,16 +122,14 @@ text
 
 ### Manual
 - All input fields have been tested manually
-    - Consultant Choice
-    ![Validation consultant choice](docs/testing/validation_consultant_choice.png)
-    - Project Name
-    ![Validation project name](docs/testing/validation_project_name.png)
-    - Number of Tasks
-    ![Validation number of tasks](docs/testing/validation_number_of_tasks.png)
-    - Task Description
-    ![Validation task description](docs/testing/validation_task_description.png)
-    - Task Date
-    ![Validation task date](docs/testing/validation_project_date.png)
+
+| Input | Output |
+|--|--|
+|Consultant Choice|![Validation consultant choice](docs/testing/validation_consultant_choice.png)|
+|Project Name|![Validation project name](docs/testing/validation_project_name.png)|
+|Number of Tasks|![Validation number of tasks](docs/testing/validation_number_of_tasks.png)|
+|Task Description|![Validation task description](docs/testing/validation_task_description.png)|
+|Task Date|![Validation task date](docs/testing/validation_project_date.png)|
 
 ### Testing User Stories from User Experience (UX) Section
 #### First Time Visitor Goals
@@ -163,38 +139,21 @@ text
 - I want to know what data to enter and when a wrong value is entered
     - Data validation is present across all manual input fields
 
-- I want the text to be laid out clearly
-![Text layout](docs/testing/ux_input_acceptance.png)
-
-- I want to know when my inputs are accepted
-    - Inputs display acceptance messaging
-
-![Input acceptance](docs/testing/ux_input_acceptance.png)
-
-- I want to be able to choose from a list of consultants
-
-![Consultant list](docs/screenshots/consultant_list.png)
-
-- I want to be able to input project name
-
-![Project name](docs/screenshots/project_name.png)
-
-- I want to be able to input task descriptions
-
-![Task description](docs/screenshots/task_description_dates.png)
-
-- I want to be able to input date for task completion
-
-![Task date](docs/screenshots/task_description_dates.png)
-
-- I want to be able to see when my inputs are copied across to google docs
-
-![Project data](docs/screenshots/project_info.png)
+| User Story | Output |
+|--|--|
+|I want the text to be laid out clearly|![Text layout](docs/testing/ux_input_acceptance.png)|
+|I want to know when my inputs are accepted|![Input acceptance](docs/testing/ux_input_acceptance.png)|
+|I want to be able to choose from a list of consultants|![Consultant list](docs/screenshots/consultant_list.png)|
+|I want to be able to input project name|![Project name](docs/screenshots/project_name.png)|
+|I want to be able to input task descriptions|![Task description](docs/screenshots/task_description_dates.png)|
+|I want to be able to input date for task completion|![Task date](docs/screenshots/task_description_dates.png)|
+|I want to be able to see when my inputs are copied across to google docs|![Project data](docs/screenshots/project_info.png)|
 
 #### Returning Visitor Goals
-- I want to be able to add another project when I'm finished with my entry
 
-![Return to main menu](docs/testing/ux_main_menu.png)
+| User Story | Output |
+|--|--|
+|I want to be able to add another project when I'm finished with my entry|![Return to main menu](docs/testing/ux_main_menu.png)|
 
 #### Frequent Visitor Goals
 - Features to be implemented in future development releases
@@ -261,6 +220,8 @@ The steps below describe how to fork or clone the repository if desired.
 ## Credits
 ### Code Used
 - OS Clear - function shared by my mentor Alan
+
+- Main Menu - While True and print option example shared by my mentor Alan to which I've added further code
 
 - ChatGPT - update_worksheet code below was used to organise data into separate rows
 
